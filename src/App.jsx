@@ -7,8 +7,6 @@ import './App.css';
 
 const App = () => {
   const [menus, setMenus] = useState(MENUS);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const categories = ['all', 'breakfast', 'lunch', 'shakes'];
   const categories = ['all', ...new Set(MENUS.map((menu) => menu.category))];
 
   const handleFilterMenusByCategories = (category) => {
