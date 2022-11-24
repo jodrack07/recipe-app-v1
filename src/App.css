@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/** 
+ * Path: src\App.js
+ * App component
+ */
+.app {
+  position: relative;
+  width: 95vw;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+
+.app h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.app .intro {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: dodgerblue;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.underline {
+  margin: 0 auto 4px auto;
+  width: 20%;
+  height: 5px;
+  background-color: #fff;
+}
+
+/**
+* Path: src\components\Categories
+* Categories component
+*/
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.categories button {
+  background-color: transparent;
+  border: none;
+}
+
+.category {
+  color: chocolate;
+  padding: .4rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.category:hover,  .category.active {
+  background-color: chocolate;
+  padding: .4rem .7rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+/** 
+ * Path: src\components\Menu.js
+ * Menu component
+ */
+.menus {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+}
+
+.menu {
+  /* background: #ddd; */
+  margin-bottom: 20px;
+}
+
+.menu img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.menu .details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+.menu .details .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.menu .details .header h3 {
+  color: #444;
+}
+
+.menu .details .header p {
+  color: chocolate;
+}
+
+/** 
+ * Path: src\components\Loading.js
+ * Loading component
+ */
+.loader {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-top: 3px solid blue;
+  border-bottom: 3px solid orange;
+  border-right: 3px solid red;
+  border-left: 3px solid pink;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .underline {
+    width: 9%;
+    height: 4px;
+  }
+
+  .menus {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
