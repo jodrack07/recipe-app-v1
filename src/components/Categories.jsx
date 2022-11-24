@@ -14,7 +14,6 @@ const Categories = ({ categories, onFilterMenusByCategory }) => {
             }}
             className={`category ${category === activeCategory ? 'active' : ''}`}
           >
-            {/* {category.charAt(0).toUpperCase() + category.slice(1)} */}
             {/* by using CSS */}
             {category}
           </button>
