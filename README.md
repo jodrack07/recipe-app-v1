@@ -2,9 +2,9 @@
 
 > Simple React Recipe  App that hepls to display recipes and filter them by their category 🙂
 
-## Tools
-> Reactjs
-> CSS3
+## Built with
+- Reactjs
+- CSS3
 
 ## Live Demo
 [react-recipe-app-v1](https://react-recipe-app-v1.netlify.app/)
